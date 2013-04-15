@@ -30,6 +30,7 @@ module Arrest
       end
 
       def first(context, filter={})
+        filter.merge!({pageSize: 1})
         all(context,filter).first
       end
 
