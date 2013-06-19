@@ -4,6 +4,8 @@ require "arrest/version"
 require "arrest/default_class_loader"
 require 'arrest/helper/logger'
 
+# Add custom iso8061 method to DateTime
+
 require "arrest/utils/class_utils.rb"
 require "arrest/utils/string_utils.rb"
 
