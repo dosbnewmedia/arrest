@@ -42,6 +42,11 @@ module Arrest
         Arrest::OrderedCollection.new(context, self, self.resource_path, filter)
       end
 
+      def range(context, attribute, start_value, end_value, filter={})
+        filter = filter.merge!({attribute => "[#{start_value} TO #{end_value}]"})
+        all(context, filter)
+      end
+
       def find(context, id)
         context.cache.lookup(id) do
           begin
